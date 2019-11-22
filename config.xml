@@ -17,7 +17,9 @@
   <plugin name="cordova-plugin-camera"/>
     <plugin name="cordova-plugin-media-capture"/>
         <plugin name="cordova-plugin-media"/>
-  <access origin="*" />
+<plugin name     ="cordova-plugin-crypto-file"/>   
+        <access origin="*" />
+        
   <allow-intent href="http://*/*" />
   <allow-intent href="https://*/*" />
   <allow-intent href="tel:*" />
