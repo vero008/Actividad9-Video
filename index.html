@@ -5,12 +5,18 @@
         <meta name="viewport" content="width=device-width,      
                                        height=device-height initial-scale=1.0,      
                                        maximum-scale=1.0, user-scalable=no;" />    
-        <meta http-equiv="Content-type" content="text/html;      charset=utf-8">    
+       <!--<meta http-equiv="Content-type" content="text/html;      charset=utf-8">    
         <link rel="stylesheet" href="jquery.mobile1.0b3.min.css" />    
         <script type="text/javascript" charset="utf-8"      src="jquery1.6.4.min.js"></script>    
         <script type="text/javascript" charset="utf-8"      src="jquery.mobile1.0b3.min.js"></script>    
         <script type="text/javascript" charset="utf-8"      src="phonegap.js"></script>    
-        <script type="text/javascript" charset="utf-8">      var results;
+        <script type="text/javascript" charset="utf-8">   
+-->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        
+        var results;
       function onBodyLoad() {        
           //Add the PhoneGap deviceready event listener        
           document.addEventListener("deviceready", onDeviceReady,          false);      }
@@ -47,7 +53,7 @@
                                                    htmlStr = "<p>Results:</p><ol>";          
                                                    for( i = 0, len; i < len; i += 1) {            
                                                        //alert(fileList[i].fullPath);            
-                                                       htmlStr += '<li><a href="              fileList[i].fullPath + ">' + fileList[i].name +              '</a></li>';          
+                                                   htmlStr += '<li><a href="file:/' +              fileList[i].fullPath + '">' + fileList[i].name +              '</a></li>';    
                                                    }          htmlStr += "</ol>";          
                                                    //Set the results content          
                                                    res.innerHTML = htmlStr;        }      }
