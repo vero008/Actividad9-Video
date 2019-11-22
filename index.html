@@ -47,7 +47,8 @@
                                                    htmlStr = "<p>Results:</p><ol>";          
                                                    for( i = 0, len; i < len; i += 1) {            
                                                        //alert(fileList[i].fullPath);            
-                                                       htmlStr += '<li><a href="file:/' +              fileList[i].fullPath + '">' + fileList[i].name +              '</a></li>';          }          htmlStr += "</ol>";          
+                                                       htmlStr += '<li><a href="              fileList[i].fullPath + ">' + fileList[i].name +              '</a></li>';          
+                                                   }          htmlStr += "</ol>";          
                                                    //Set the results content          
                                                    res.innerHTML = htmlStr;        }      }
       function onCaptureError(e) {        var msgText;        
