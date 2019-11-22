@@ -31,7 +31,14 @@
                   navigator.device.capture.captureAudio(              onCaptureSuccess, onCaptureError,              {duration: capDur, limit: numItems});            break;          
               case 1:            
                   //Capture Image            
-                  navigator.device.capture.captureImage(              onCaptureSuccess, onCaptureError,              {limit: numItems});            break;          case 2:            
+                  //navigator.device.capture.captureImage(onCaptureSuccess, onCaptureError,              {limit: numItems});            
+                           
+                  navigator.camera.getPicture(onCameraSuccess,onCameraError,{quality : 50,destinationType : Camera.DestinationType.FILE_URI});
+                  
+               
+                  break;          
+              
+              case 2:            
                   //Capture Video            
                   navigator.device.capture.captureVideo(              onCaptureSuccess, onCaptureError,              {duration: capDur, limit: numItems});            break;        }      }
           function onCaptureSuccess(fileList) {        var i, len, htmlStr;        len = fileList.length;        
